@@ -1,0 +1,21 @@
+.pa-canvas{
+    cursor: pointer;
+}
+
+.pa-color-box-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    .pa-color-box{
+        height: 40px;
+        background-color: red;
+    }
+}
+
+.select-color{
+    padding: 2px;
+    margin: 0;
+    background-color: aqua;
+
+}

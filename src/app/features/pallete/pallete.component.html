@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container mx-auto px-2 py-4">
+  <main class="pa-container">
+    <app-chromatic-circle
+      (selectColor)="catchColor($event)"
+      [canvasHeight]="300"
+      [canvasWidth]="300"
+    />
+  </main>
+
+  <app-palette-serie
+    titlePalette="Analogous Colors"
+    [paletteSerie]="analogPalette$()"
+  ></app-palette-serie>
+  <app-palette-serie
+    titlePalette="Monochromatic Colors"
+    [paletteSerie]="monochromaticPalette$()"
+  ></app-palette-serie>
+  <app-palette-serie
+    titlePalette="Complementary Colors"
+    [paletteSerie]="complementaryPalette$()"
+  ></app-palette-serie>
+  <app-palette-serie
+    titlePalette="Triad Colors"
+    [paletteSerie]="TriadPalette$()"
+  ></app-palette-serie>
+  <app-palette-serie
+    titlePalette="Tetradic Colors"
+    [paletteSerie]="TetradiedPalette$()"
+  ></app-palette-serie>
+
+</div>

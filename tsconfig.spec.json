@@ -3,10 +3,17 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
-    ]
+    ],
+    "paths": {
+      "@model/*":["src/app/shared/model/*"],
+      "@shared-components/*":["src/app/shared/components/*"],
+      "@core/*":["src/app/core/*"]
+
+    }
   },
   "include": [
     "src/**/*.spec.ts",

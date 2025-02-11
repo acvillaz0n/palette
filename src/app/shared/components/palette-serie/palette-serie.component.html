@@ -1,0 +1,15 @@
+@if (paletteSerie().length) {
+  <h2 class="font-bold font-sans text-xl mt-2">{{ titlePalette() }}</h2>
+  <section class="flex gap-2 flex-wrap">
+    @for (color of paletteSerie(); track $index) {
+    <div
+      [style.background]="color"
+      class="rounded-lg p-1.5 relative w-20 h-6 mt-4">
+      <p
+        class="text-base font-mono absolute -top-4 rounded-lg bg-slate-50 px-0.5 bg-opacity-60">
+        {{ color | uppercase }}
+      </p>
+    </div>
+    }
+  </section>
+}
