@@ -1,0 +1,9 @@
+{{notificationClock()}}
+<main class="container flex gap-2 flex-col max-w-max p-2 py-5 fixed right-0 top-20">
+    @for (notification of notifications(); track notification.id) {
+        <div [id]="notification.id" [class]="buildClassContainer(notification.color)">
+            <img [src]="buildSrcImg(notification.type)">
+            <span [class]="buildClassText(notification.color)">{{notification.message}}</span>
+        </div>
+    }
+</main>

@@ -3,8 +3,9 @@
   <section class="flex gap-2 flex-wrap">
     @for (color of paletteSerie(); track $index) {
     <div
+      (click)="copyColorInClipboard(color)"
       [style.background]="color"
-      class="rounded-lg p-1.5 relative w-20 h-6 mt-4">
+      class="rounded-lg p-1.5 relative w-20 h-6 mt-4 cursor-copy">
       <p
         class="text-base font-mono absolute -top-4 rounded-lg bg-slate-50 px-0.5 bg-opacity-60">
         {{ color | uppercase }}

@@ -1,0 +1,13 @@
+.notification-initial{
+    right: -300px;
+    animation: slide-in 0.5s ease-in-out forwards, slide-in 1s ease-in-out 2.5s reverse forwards;
+}
+
+@keyframes slide-in {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0px; /* Posición final */
+    }
+}
